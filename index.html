@@ -2958,6 +2958,14 @@ function updateCartUI() {
         });
 
         checkSession();
+    
+    </script>
+        <script type="module">
+        import { initSupportChat } from './js/ai-chat.js';
+        initSupportChat({
+            mock: true,
+            getListings: () => (typeof allListings !== 'undefined' ? allListings : [])
+        });
     </script>
     <script src="js/branch-switcher.js" defer></script>
 </body>
